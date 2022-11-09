@@ -32,8 +32,8 @@ include(cmake/CPM.cmake)
 CPMFindPackage(
    NAME fmt
    OPTIONS FMT_INSTALL
-   GIT_REPOSITORY https://github.com/fmtlib/fmt
-   GIT_TAG 9.1.0
+   GIT_REPOSITORY  https://github.com/RFCreations/fmt.git
+   GIT_TAG         8.1.0_char16
 )
 
 CPMFindPackage(
@@ -55,8 +55,8 @@ CPMFindPackage(
 
 CPMFindPackage(
    NAME FastFloat
-   GIT_REPOSITORY https://github.com/fastfloat/fast_float.git
-   GIT_TAG v3.6.0
+   GIT_REPOSITORY https://github.com/RFCreations/fast_float
+   GIT_TAG cc304a404e3e52f
 )
 
 CPMAddPackage(
@@ -67,7 +67,7 @@ CPMAddPackage(
 
 target_link_libraries(
     glaze_glaze INTERFACE
-    fmt::fmt-header-only
+    fmt::fmt
     dragonbox::dragonbox_to_chars
     nanorange::nanorange
     frozen::frozen
